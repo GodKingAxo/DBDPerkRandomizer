@@ -1,68 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
-	<script type="text/javascript" src="main.js"></script>
-	<title>Killer Perk Randomizer</title>
-</head>
-<body class="killer">	
-		<div class="perks">
-			<div class="p1"><div class="perk-tip"><img class="mainimgs" src="killerimgs/Teachable_bamboozle.png">
-			<span class="perk-info">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Unde facilis illum harum nulla earum accusamus numquam dolorum, quidem tempora ullam blanditiis ab dolorem reprehenderit consectetur cupiditate veniam, dolore ducimus pariatur.</span></div></div>
-			<div class="p2"><div class="perk-tip"><img class="mainimgs" src="killerimgs/Teachable_bamboozle.png"><span class="perk-info">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Unde facilis illum harum nulla earum accusamus numquam dolorum, quidem tempora ullam blanditiis ab dolorem reprehenderit consectetur cupiditate veniam, dolore ducimus pariatur.</span></div></div>
-			<div class="p3"><div class="perk-tip"><img class="mainimgs" src="killerimgs/Teachable_bamboozle.png"><span class="perk-info">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Unde facilis illum harum nulla earum accusamus numquam dolorum, quidem tempora ullam blanditiis ab dolorem reprehenderit consectetur cupiditate veniam, dolore ducimus pariatur.</span></div></div>
-			<div class="p4"><div class="perk-tip"><img class="mainimgs" src="killerimgs/Teachable_bamboozle.png"><span class="perk-info">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Unde facilis illum harum nulla earum accusamus numquam dolorum, quidem tempora ullam blanditiis ab dolorem reprehenderit consectetur cupiditate veniam, dolore ducimus pariatur.</span></div></div>
-			<div class="dice"><a href="killer.html"><img class="diceimg" src="miscimgs/Dice.png"></a></div>
-		</div>
-		<p id="demo"></p>
-		<p id="demogor"></p>
-		<script>
-			/* Make perks not duplicate and give them a description. I think maps is the way to go here
-			var description = [
-	"killerimgs/Teachable_agitation.png",
-	"killerimgs/Teachable_aNursesCalling.png",
-	"killerimgs/Teachable_bamboozle.png",
-	"killerimgs/Teachable_barbecueAndChilli.png",
-	"killerimgs/Teachable_beastOfPrey.png",
-	"killerimgs/Teachable_bloodEcho.png",
-	"killerimgs/Teachable_bloodhound.png",
-	"killerimgs/Teachable_bloodWarden.png",
-	"killerimgs/Teachable_brutalStrength.png",
-	"killerimgs/Teachable_corruptIntervention.png",
-	"killerimgs/Teachable_coulrophobia.png"
-		];
-		var size = description.length;
-		$('.perk-tip img').each(function() {
-	  var x = Math.floor(size * Math.random()); //move random inside loop
-	  if ($(this).hasClass("mainimgs")) { //replace "img" with "this"
-	    $(this).attr("src", description[x]);
-  }
-}); /* Can make a system that checks which image is on the page, and assigns the description to it directly. 
-		I need to loop through each objects image and output a random one onto the webpage. BUT I don't want the description to be randomized. 
-		Research js equivalent of dictionaries[The answer was Nested Objects I think] 
-		The way I want the web page to work is when the images are randomized, the tooltip will display each description for each corresponding perk. This means that I have to have the image, and the description somewhat tied together right?
-				perkOne: {img:"killerimgs/Teachable_agitation.png", desc:"While carrying a Survivor, your Movement speed is increased by 6/12/18 % and your Terror Radius is increased by 12 metres."}, 
-				perkTwo: {img:"killerimgs/Teachable_bamboozle.png", desc:"Performing a Vault action is 5/10/15 % faster and calls upon The Entity to block that Vault location for Survivors for 8/12/16 seconds."}
-		*/
-		let x = "";
-		let y = "";
-			var perks = 
-			{
-				perkImages: ['killerimgs/Teachable_agitation.png', 'killerimgs/Teachable_bamboozle.png', 'killerimgs/Teachable_barbecueAndChilli.png'],
-				perkToolTips:["wreigerpogkrepogkerpokgorepkg", "erpojgkrepojgpoearjgpoerjgpojregpjo", "ergpkrepogjserpojgerpojgprseojg"],
-				allImages: function() {
-					console.log('these are all of the images:');
-					this.perkImages.forEach(imgs => {
-						console.log(imgs);
-					})
-				}
-			};
-			perks.allImages();
-			document.getElementById("demo").innerHTML = x;
-			document.getElementById("demogor").innerHTML = y;
-		</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Killer Perk Randomizer</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="perks">
+        <div class="p1">
+          <div class="perk-tip">
+            <img
+              class="mainimgs"
+              id="perk-imgs"
+              src="killerimgs/Teachable_bamboozle.png"
+            />
+            <span class="perk-info">
+              Lorem ipsum dolor sit amet consectetur adipisicing, elit. Unde
+              facilis illum harum nulla earum accusamus numquam dolorum, quidem
+              tempora ullam blanditiis ab dolorem reprehenderit consectetur
+              cupiditate veniam, dolore ducimus pariatur.</span
+            >
+          </div>
+        </div>
+        <div class="p2">
+          <div class="perk-tip">
+            <img
+              class="mainimgs"
+              id="perk-imgs"
+              src="killerimgs/Teachable_bamboozle.png"
+            /><span class="perk-info">
+              Lorem ipsum dolor sit amet consectetur adipisicing, elit. Unde
+              facilis illum harum nulla earum accusamus numquam dolorum, quidem
+              tempora ullam blanditiis ab dolorem reprehenderit consectetur
+              cupiditate veniam, dolore ducimus pariatur.</span
+            >
+          </div>
+        </div>
+        <div class="p3">
+          <div class="perk-tip">
+            <img
+              class="mainimgs"
+              id="perk-imgs"
+              src="killerimgs/Teachable_bamboozle.png"
+            /><span class="perk-info">
+              Lorem ipsum dolor sit amet consectetur adipisicing, elit. Unde
+              facilis illum harum nulla earum accusamus numquam dolorum, quidem
+              tempora ullam blanditiis ab dolorem reprehenderit consectetur
+              cupiditate veniam, dolore ducimus pariatur.</span
+            >
+          </div>
+        </div>
+        <div class="p4">
+          <div class="perk-tip">
+            <img
+              class="mainimgs"
+              id="perk-imgs"
+              src="killerimgs/Teachable_bamboozle.png"
+            /><span class="perk-info">
+              Lorem ipsum dolor sit amet consectetur adipisicing, elit. Unde
+              facilis illum harum nulla earum accusamus numquam dolorum, quidem
+              tempora ullam blanditiis ab dolorem reprehenderit consectetur
+              cupiditate veniam, dolore ducimus pariatur.</span
+            >
+          </div>
+        </div>
+        <div class="dice" id="dice">
+          <img
+            src="miscimgs/IconHelp_iridescentShards.png"
+            alt=""
+            class="dice-img"
+          />
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
 </html>

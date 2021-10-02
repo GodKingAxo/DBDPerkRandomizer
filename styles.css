@@ -1,82 +1,81 @@
 body.home {
-	background-color: #484848;
+  background-color: #484848;
 }
-body.killer {
-	background-image: url("miscimgs/DBDLogo2.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-}	
+body {
+  background-image: url("miscimgs/DBDLogo3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 p {
-	color: green;
+  color: green;
 }
 
 .mainimgs {
-	max-width: 100%;
-	width: 248px;
-	height: 248px;
+  max-width: 100%;
+  width: 248px;
+  height: 248px;
 }
-.diceimg {
-	width: 75px;
-}
-
 
 .home-flex-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	height: 750px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 750px;
 }
-
 
 .p1 {
-	background-image: url("miscimgs/PerkBG.png");
-	background-position: top left;
-	background-repeat: repeat-y;
-	position: absolute;
-	left: 635px;
-	top: 75px;
-
+  background-image: url("miscimgs/PerkBG.png");
+  background-position: top left;
+  background-repeat: repeat-y;
+  position: absolute;
+  left: 635px;
+  top: 75px;
 }
 .p2 {
-	background-image: url("miscimgs/PerkBG.png");
-	background-position: top left;
-	background-repeat: repeat-y;
-	position: absolute;
-	left: 482px;
-	top: 222px;
+  background-image: url("miscimgs/PerkBG.png");
+  background-position: top left;
+  background-repeat: repeat-y;
+  position: absolute;
+  left: 482px;
+  top: 222px;
 }
 .p3 {
-	background-image: url("miscimgs/PerkBG.png");
-	background-position: top left;
-	background-repeat: repeat-y;
-	position: absolute;
-	left: 630px;
-	top: 388px;
+  background-image: url("miscimgs/PerkBG.png");
+  background-position: top left;
+  background-repeat: repeat-y;
+  position: absolute;
+  left: 630px;
+  top: 388px;
 }
 .p4 {
-	background-image: url("miscimgs/PerkBG.png");
-	background-position: top left;
-	background-repeat: repeat-y;
-	position: absolute;
-	left: 795px;
-	top: 222px;
+  background-image: url("miscimgs/PerkBG.png");
+  background-position: top left;
+  background-repeat: repeat-y;
+  position: absolute;
+  left: 795px;
+  top: 222px;
 }
 .dice {
-	position: absolute;
-	left: 722px;
-	top: 315px;
+  position: absolute;
+  left: 732px;
+  top: 324px;
+}
+
+.dice-img {
+  width: 65px;
 }
 /* Tooltip text */
 .perk-tip .perk-info {
   visibility: hidden;
-  width: 120px;
+  width: 200px;
   background-color: black;
   color: #fff;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
- 
+
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
@@ -87,5 +86,5 @@ p {
   visibility: visible;
 }
 button {
-	width: 10px;
+  width: 10px;
 }
