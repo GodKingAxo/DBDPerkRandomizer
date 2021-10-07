@@ -107,34 +107,40 @@ const Whispers = new Perk("Whispers", "killerimgs/IconPerks_whispers.png", "Spor
 const ZanshinTactics = new Perk("Zanshin Tactics", "killerimgs/Teachable_zanshinTactics.png", "The Auras of Breakable Walls, Pallets, and Windows are revealed to you within 24/28/32 metres.")
 
 const perks = [Agitation, ANursesCalling, Bamboozle, BBQAndChilli, BeastOfPrey, BitterMurmur, BloodEcho, BloodWarden, Bloodhound, BrutalStrength, Claustrophobia, CorruptIntervention,Coulrophobia, CoupDeGrace, DarkDevotion, Deadlock, DeadManSwitch, Deathbound, Deerstalker, Discordance, Distressing, DragonsGrip, DyingLight, Enduring, Eruption, Fearmonger, FireUp, ForcedPenance, FranklinsDemise, FurtiveChase, Gearhead, HangmansTrick, hexBloodFavour, hexCrowdControl, hexDevourHope, hexHuntressLullaby, hexNOED, hexPlaything, hexRetribution, hexRuin, hexTheThirdSeal, hexThrilloftheHunt, hexUndying, Hoarder, Hysteria, ImAllEars, InfectiousFright, Insidious, IronGrasp, IronMaiden, Jolt, KnockOut, LethalPursuer, Lightborn, MadGrit, MakeYourChoice, MonitorAndAbuse, MonstrousShrine, Nemesis, NoWayOut, Oppression, Overcharge, OverwhelmingPresence, PlaywithYourFood, PopGoestheWeasel, Predator, Rancor, RememberMe, STBFL, ScourageHookGiftofPain, Shadowborn, SloppyButcher, SpiesfromtheShadows, SpiritFury, Starstruck, Stridor, Surveillance, TerritorialImperative, Thanatophobia, ThrillingTremors, Tinkerer, TrailofTorment, UnnervingPresence, Unrelenting, Whispers, ZanshinTactics]
-console.log(perks[3].title)
+const mainImages = document.querySelectorAll('.mainimgs')
+const perkInfo = document.querySelector('.perk-info')
 const dice = document.getElementById('dice')
 const perkImage = document.getElementById('perk-imgs')
+const perkTitle = document.getElementById("perk-title")
+const pSelf = document.getElementById("self-destro")
+const p1 = document.getElementById('p1')
+const p2 = document.getElementById('p2')
+const p3 = document.getElementById('p3')
+const p4 = document.getElementById('p4')
+console.log(p1)
 
-const mainImages = document.querySelectorAll('.mainimgs')
-
-const perkInfo = document.querySelectorAll('.perk-info')
-perkInfo.innerText = '';
-// dice.forEach((die) => {
-//     die.addEventListener('click', () => {
-//         die.src= perks.perkImages[0];
-//         perkInfo.forEach((perk) => {
-//             mainImage.addEventListener('click', () => {
-//                 perk.innerText = perks.perkDesc
-//             })
-//         })
-//     })
-// })
-//This will be the core of the program. When the dice is clicked there will be mutliple things happening. It would randomly choose a perk image and after its been chosen maybe (1.5s) it will add the corresponding description to the correct perk.
 dice.addEventListener('click', () => {
-    mainImages.forEach((mainImage) => {
-        mainImage.src = perks[0].image
-    })
-    perkInfo.forEach((perk) => {
-        perk.innerText = perks[0].desc
-    })
+    pSelf.innerHTML = ''
+    randomPerk(p1)
+    randomPerk(p2)
+    randomPerk(p3)
+    randomPerk(p4)
 })
-
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
-  }
+function randomPerk(perk) {
+    var item = perks[Math.floor(Math.random()*perks.length)];
+    perk.innerHTML = `
+    <div class="perk-tip">
+    <img
+      class="mainimgs"
+      id="perk-imgs"
+      src="${item.image}"
+    />
+    <div class="perk-info">
+      <h1 class="title" id="perk-title">${item.title}</h1>
+      <p>${item.desc}</p>
+    </div>
+  </div>
+</div>`
+    //  perkInfo.innerHTML = `<h1>${item.title}</h1>
+    //                       <p>${item.desc}</p>`
+}

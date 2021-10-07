@@ -8,9 +8,13 @@ body {
 }
 
 p {
-  color: green;
+  color: #dd6868;
 }
-
+.self-destro {
+  position: relative;
+  top: px;
+  right: 0;
+}
 .mainimgs {
   max-width: 100%;
   width: 248px;
@@ -62,14 +66,16 @@ p {
   left: 732px;
   top: 324px;
 }
-
+.dice p {
+  left: -75px;
+}
 .dice-img {
   width: 65px;
 }
 /* Tooltip text */
 .perk-tip .perk-info {
   visibility: hidden;
-  width: 200px;
+  width: 400px;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -79,6 +85,24 @@ p {
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
+}
+/* Left tooltip */
+.p2 .perk-info {
+  top: -5px;
+  right: 105%;
+}
+/* Right tooltip */
+.p1 .perk-info {
+  top: -35px;
+  left: 105%;
+}
+.p4 .perk-info {
+  top: -5px;
+  left: 105%;
+}
+.p3 .perk-info {
+  top: 90px;
+  left: 105%;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
