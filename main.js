@@ -7,6 +7,13 @@
 
 //Actual easiest way is the create a class and instantiate each perk. After make it into an array.
 
+//PROBLEMS THAT NEED ADDRESSING:
+//Oppression image is busted
+//No check whether one cell already has a perk on it or not, results in two of the same perk showing up sometimes
+//scourage hook image is busted
+//Will most likely need to fix the sizing, because when the window is smaller the whole app looks bad. Need to add media queries and make them size appropriately for mobile and smaller/larger screens
+//Deadlock has low quality img
+
 class Perk {
     constructor(title, image, desc) {
         this.title = title

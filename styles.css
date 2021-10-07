@@ -10,11 +10,6 @@ body {
 p {
   color: #dd6868;
 }
-.self-destro {
-  position: relative;
-  top: px;
-  right: 0;
-}
 .mainimgs {
   max-width: 100%;
   width: 248px;
@@ -66,11 +61,41 @@ p {
   left: 732px;
   top: 324px;
 }
-.dice p {
-  left: -75px;
+.self-destro {
+  position: absolute;
+  left: 670px;
+  top: 265px;
 }
 .dice-img {
   width: 65px;
+}
+.killers .home-killers-title {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+}
+.killers:hover .home-killers-title {
+  visibility: visible;
+}
+.survivors .home-survivors-title {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+}
+.survivors:hover .home-survivors-title {
+  visibility: visible;
 }
 /* Tooltip text */
 .perk-tip .perk-info {
