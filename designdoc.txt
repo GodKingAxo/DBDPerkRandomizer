@@ -7,6 +7,14 @@ In the middle of the screen. There will be two options. On the left most side th
 
 Killer and Survivor:
 When entering the page, in the middle, there will be 4 random perk images for you to try in a hexagonal shape.[dun]
-When hovered over each perk, there will be a tooltip that has the name at the top, description at the bottom, and the tagline of the perk.[WIP]
-In order to re-randomize the perks I am going have a dice in the middle of the perks and once clicked it will refresh the page. [DUN]
+When hovered over each perk, there will be a tooltip that has the name at the top, description at the bottom, and the tagline of the perk.[DUN](didnt add the tagline might do that later)
+In order to re-randomize the perks I am going have a dice in the middle of the perks and once clicked it will refresh the page. [DUN](made the dice an iri shard, the dice didnt really fit with the dbd theme)
 BG image will be the DBD Logo.[DUN]
+
+Still need to do all of the above on the survivor side.[WIP]
+
+Since I have essentially completed my original task with this app these are some other ideas that I might add in the future.
+
+Future ideas:
+Add a killer randomizer ontop of the perk randomizer.
+Killer randomizer would include a killer card, information about the killer, price, backstory, and maybe in-game skill difficulty. Ontop of that I could add an addon randomizer and an offering randomizer. And maybe even cosmetic randomizer too?

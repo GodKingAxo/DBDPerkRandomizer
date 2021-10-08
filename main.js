@@ -1,18 +1,15 @@
-// Array with every killer and survivor perk image
-// Array with description of each 
-
-//Maybe a map with the image as the key and description as the value. Description would have an array within it. [name, description, tagline]
-
-//I am going to put my thoughts here. I was going to link the perk title, images, and description by just using array zero indexing or w/e [0] = bamboozle ect. That might be the easiest way, but its the only way that makes sense to me right now. After I tie those three things, I need to create logic to flip through each image when the dice is clicked and after a delay give the randomized perks, with correct descriptions.
-
+// Array with every killer and survivor perk: images, title, description
 //Actual easiest way is the create a class and instantiate each perk. After make it into an array.
 
+//Still need to add a delay to perks showing up and a little flipping animation like in slots for the images.
+
+//Future ideas:
+//Add a killer randomizer ontop of the perk randomizer.
+//Killer randomizer would include a killer card, information about the killer, price, backstory, and maybe in-game skill difficulty. Ontop of that I could add an addon randomizer and an offering randomizer. And maybe even cosmetic randomizer too?
+
+
 //PROBLEMS THAT NEED ADDRESSING:
-//Oppression image is busted
-//No check whether one cell already has a perk on it or not, results in two of the same perk showing up sometimes
-//scourage hook image is busted
 //Will most likely need to fix the sizing, because when the window is smaller the whole app looks bad. Need to add media queries and make them size appropriately for mobile and smaller/larger screens
-//Deadlock has low quality img
 
 class Perk {
     constructor(title, image, desc) {
@@ -86,7 +83,7 @@ const MonitorAndAbuse = new Perk("Monitor & Abuse", "killerimgs/Teachable_monito
 const MonstrousShrine = new Perk("Monstrous Shrine", "killerimgs/IconPerks_monstrousShrine.png", "The Basement Hooks possess the following benefits: Hook Progression is accelerated by 3/6/9 %. Self-Unhook difficulty is increased by 5/10/15 %. Self-Unhook penalty is increased by 3/6/9 %.")
 const Nemesis = new Perk("Nemesis", "killerimgs/Teachable_nemesis.png", "Each time a Survivor blinds you or stuns you using a Pallet or Locker, they become your new Obsession: The Survivor suffers from the Oblivious Status Effect for 40/50/60 seconds and their Aura is revealed to you for 4 seconds.")
 const NoWayOut = new Perk("No Way Out", "killerimgs/Teachable_noWayOut.png", "For each Survivor you hook for the first time, No Way Out gains 1 Token. Once the Exit Gates have been powered, No Way Out activates: When a Survivor interacts with an Exit Gate Switch, you receive a Loud Noise notification and The Entity blocks both Exit Gate Switches for 12 seconds and an additional 6/9/12 seconds per Token in your possession, up to a combined maximum of 36/48/60 seconds.")
-const Oppression = new Perk("Oppression", "killerimgs/oppression.png", "When damaging a Generator, up to 3 other random Generators also begin regressing. Triggers a difficult Skill Check if the selected Generators are currently being repaired. Oppression has a cool-down of 120/100/80 seconds.")
+const Oppression = new Perk("Oppression", "killerimgs/Teachable_oppression.png", "When damaging a Generator, up to 3 other random Generators also begin regressing. Triggers a difficult Skill Check if the selected Generators are currently being repaired. Oppression has a cool-down of 120/100/80 seconds.")
 const Overcharge = new Perk("Overcharge", "killerimgs/Teachable_overcharge.png","Damaging a Generator overcharges it: The next Survivor interacting with it will be faced with a difficult Skill Check. Failing the Skill Check results in an additional Progression loss of 3/4/5 %. Succeeding the Skill Check does not grant any bonus Progression.")
 const OverwhelmingPresence = new Perk("Overwhelming Presence","killerimgs/Teachable_overwhelmingPresence.png", "Survivors within your Terror Radius suffer from inefficiency: When using an Item, its Depletion rate is increased by 80/90/100 %.")
 const PlaywithYourFood = new Perk("Play with Your Food", "killerimgs/Teachable_playWithYourFood.png", "Each time you chase your Obsession  and let them escape, Play with Your Food receives 1 Token, up to a maximum of 3 Tokens: Each Token applies a stack-able 3/4/5 % Haste  Status Effect, up to a maximum of 9/12/15 %. Performing Basic Attacks, or Special Attacks that can damage Survivors, consumes 1 Token. Play with Your Food has a cool-down of 10 seconds on Token-accumulation.")
@@ -95,7 +92,7 @@ const Predator = new Perk("Predator", "killerimgs/Teachable_predator.png", "The 
 const Rancor = new Perk("Rancor", "killerimgs/Teachable_rancor.png", "Each time a Generator is completed: Your Aura is revealed to the Obsession for 5/4/3 seconds. All Survivors' locations are revealed to you for 3 seconds.Once all Generators are completed: The Obsession suffers from a permanent Exposed Status Effect. You are granted the ability to kill the Obsession by your own hand.")
 const RememberMe = new Perk("Remember Me", "killerimgs/Teachable_rememberMe.png", "Each time you hit your Obsession with a Basic Attack, Remember Me gains 1 Token: The Opening time of both Exit Gates is increased by 4 seconds per Token, up to a maximum of 8 additional/12 additional/16 additional seconds. The Obsession is unaffected by this penalty.")
 const STBFL = new Perk("Save the Best for Last", "killerimgs/Teachable_saveTheBestForLast.png", "Each time you hit your Obsession with a Basic Attack, Save the Best for Last loses 4/3/2 Tokens. When the Obsession is sacrificed or killed, you can neither gain nor lose any more Tokens.")
-const ScourageHookGiftofPain = new Perk("Scourage Hook: Gift of Pain", "killerimgs/scourageHookGiftOfPain.png", "When a Survivor is unhooked from a Scourge Hook they suffer from the Haemorrhage and Mangled Status Effects. Both Status Effects are removed upon being healed Upon being healed, the Survivor suffers from a 7/8/9 % Healing and Repairing Action Speed penalty until they are injured again.")
+const ScourageHookGiftofPain = new Perk("Scourage Hook: Gift of Pain", "killerimgs/Teachable_scourgeHookGiftOfPain.png", "When a Survivor is unhooked from a Scourge Hook they suffer from the Haemorrhage and Mangled Status Effects. Both Status Effects are removed upon being healed Upon being healed, the Survivor suffers from a 7/8/9 % Healing and Repairing Action Speed penalty until they are injured again.")
 const Shadowborn = new Perk("Shadowborn", "killerimgs/Teachable_shadowborn.png", "Your Field of View is increased by 9/12/15 °Field of View gains do not stack.")
 const SloppyButcher = new Perk("Sloppy Butcher", "killerimgs/IconPerks_sloppyButcher.png", "Wounds inflicted by Basic Attacks cause Survivors to suffer from the Haemorrhage and Mangled Status Effects: Haemorrhage increases the Survivor's Bleeding frequency by 50/75/100 %. Both Status Effects are removed once the Survivor is fully healed.")
 const SpiesfromtheShadows = new Perk("Spies from the Shadows","killerimgs/IconPerks_spiesFromTheShadows.png", "Crows found throughout the Trial Grounds can communicate directly with you. Crows startled by Survivors within 20/28/36 metres alert you with a Loud Noise notification. Spies from the Shadows has a cool-down of 5 seconds between alerts.")
@@ -114,17 +111,12 @@ const Whispers = new Perk("Whispers", "killerimgs/IconPerks_whispers.png", "Spor
 const ZanshinTactics = new Perk("Zanshin Tactics", "killerimgs/Teachable_zanshinTactics.png", "The Auras of Breakable Walls, Pallets, and Windows are revealed to you within 24/28/32 metres.")
 
 const perks = [Agitation, ANursesCalling, Bamboozle, BBQAndChilli, BeastOfPrey, BitterMurmur, BloodEcho, BloodWarden, Bloodhound, BrutalStrength, Claustrophobia, CorruptIntervention,Coulrophobia, CoupDeGrace, DarkDevotion, Deadlock, DeadManSwitch, Deathbound, Deerstalker, Discordance, Distressing, DragonsGrip, DyingLight, Enduring, Eruption, Fearmonger, FireUp, ForcedPenance, FranklinsDemise, FurtiveChase, Gearhead, HangmansTrick, hexBloodFavour, hexCrowdControl, hexDevourHope, hexHuntressLullaby, hexNOED, hexPlaything, hexRetribution, hexRuin, hexTheThirdSeal, hexThrilloftheHunt, hexUndying, Hoarder, Hysteria, ImAllEars, InfectiousFright, Insidious, IronGrasp, IronMaiden, Jolt, KnockOut, LethalPursuer, Lightborn, MadGrit, MakeYourChoice, MonitorAndAbuse, MonstrousShrine, Nemesis, NoWayOut, Oppression, Overcharge, OverwhelmingPresence, PlaywithYourFood, PopGoestheWeasel, Predator, Rancor, RememberMe, STBFL, ScourageHookGiftofPain, Shadowborn, SloppyButcher, SpiesfromtheShadows, SpiritFury, Starstruck, Stridor, Surveillance, TerritorialImperative, Thanatophobia, ThrillingTremors, Tinkerer, TrailofTorment, UnnervingPresence, Unrelenting, Whispers, ZanshinTactics]
-const mainImages = document.querySelectorAll('.mainimgs')
-const perkInfo = document.querySelector('.perk-info')
 const dice = document.getElementById('dice')
-const perkImage = document.getElementById('perk-imgs')
-const perkTitle = document.getElementById("perk-title")
 const pSelf = document.getElementById("self-destro")
 const p1 = document.getElementById('p1')
 const p2 = document.getElementById('p2')
 const p3 = document.getElementById('p3')
 const p4 = document.getElementById('p4')
-console.log(p1)
 
 dice.addEventListener('click', () => {
     pSelf.innerHTML = ''
@@ -132,6 +124,7 @@ dice.addEventListener('click', () => {
     randomPerk(p2)
     randomPerk(p3)
     randomPerk(p4)
+    perkChecker()
 })
 function randomPerk(perk) {
     var item = perks[Math.floor(Math.random()*perks.length)];
@@ -148,6 +141,37 @@ function randomPerk(perk) {
     </div>
   </div>
 </div>`
-    //  perkInfo.innerHTML = `<h1>${item.title}</h1>
-    //                       <p>${item.desc}</p>`
+}
+function perkChecker(){
+    const perkOneTitle = p1.childNodes[1].childNodes[3].childNodes[1].textContent
+    const perkTwoTitle = p2.childNodes[1].childNodes[3].childNodes[1].textContent
+    const perkThreeTitle = p3.childNodes[1].childNodes[3].childNodes[1].textContent
+    const perkFourTitle = p4.childNodes[1].childNodes[3].childNodes[1].textContent
+    // console.log(perkOneTitle)
+    // console.log(perkTwoTitle)
+    if(perkOneTitle === perkTwoTitle){
+        randomPerk(p1) 
+        randomPerk(p2) 
+        console.log("same title")}
+    if(perkOneTitle === perkThreeTitle) {
+        randomPerk(p1)
+        randomPerk(p3)
+    }
+    if(perkOneTitle === perkFourTitle) {
+        randomPerk(p1)
+        randomPerk(p4)
+    }
+    if(perkTwoTitle === perkThreeTitle) {
+        randomPerk(p2)
+        randomPerk(p3)
+    }
+    if(perkTwoTitle === perkFourTitle) {
+        randomPerk(p2)
+        randomPerk(p4)
+    }
+    if(perkThreeTitle === perkFourTitle) {
+        randomPerk(p3)
+        randomPerk(p4)
+    }
+    
 }
