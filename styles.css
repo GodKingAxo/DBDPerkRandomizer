@@ -2,11 +2,11 @@ body.home {
   background-color: #484848;
 }
 body {
-  background-image: url("miscimgs/DBDLogo3.jpg");
+  background: url("miscimgs/DBDLogo3.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
+  height: 100%;
+  overflow: hidden;
 }
-
 p {
   color: #dd6868;
 }
@@ -25,49 +25,42 @@ p {
 }
 
 .p1 {
-  background-image: url("miscimgs/PerkBG.png");
-  background-position: top left;
-  background-repeat: repeat-y;
   position: absolute;
+  width: 100%;
   left: 635px;
   top: 75px;
 }
 .p2 {
-  background-image: url("miscimgs/PerkBG.png");
-  background-position: top left;
-  background-repeat: repeat-y;
   position: absolute;
+  width: 100%;
   left: 482px;
   top: 222px;
 }
 .p3 {
-  background-image: url("miscimgs/PerkBG.png");
-  background-position: top left;
-  background-repeat: repeat-y;
   position: absolute;
+  width: 100%;
   left: 630px;
   top: 388px;
 }
 .p4 {
-  background-image: url("miscimgs/PerkBG.png");
-  background-position: top left;
-  background-repeat: repeat-y;
   position: absolute;
+  width: 100%;
   left: 795px;
   top: 222px;
 }
 .dice {
   position: absolute;
+  width: 100%;
   left: 732px;
   top: 324px;
+}
+.dice-img {
+  width: 65px;
 }
 .self-destro {
   position: absolute;
   left: 670px;
   top: 265px;
-}
-.dice-img {
-  width: 65px;
 }
 .killers .home-killers-title {
   visibility: hidden;
@@ -136,4 +129,86 @@ p {
 }
 button {
   width: 10px;
+}
+@media screen and (max-width: 320px) {
+  body {
+    overflow: scroll;
+  }
+  .dice {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 235px;
+    z-index: 2;
+  }
+  .dice-img {
+    width: 45px;
+  }
+  .p1 {
+    left: 0px;
+    top: 0px;
+  }
+  .p1 img {
+    width: 40%;
+    height: 100%;
+  }
+
+  .p1 .perk-info {
+    top: 5px;
+    left: 125px;
+    width: 60%;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .p2 {
+    left: 0px;
+    top: 130px;
+  }
+  .p2 img {
+    width: 40%;
+    height: 100%;
+  }
+  .p2 .perk-info {
+    top: 5px;
+    left: 125px;
+    width: 60%;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .p3 {
+    left: 0px;
+    top: 255px;
+  }
+  .p3 img {
+    width: 40%;
+    height: 100%;
+  }
+  .p3 .perk-info {
+    top: 5px;
+    left: 125px;
+    width: 60%;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .p4 {
+    left: 0px;
+    top: 395px;
+  }
+  .p4 img {
+    width: 40%;
+    height: 100%;
+  }
+  .p4 .perk-info {
+    top: 5px;
+    left: 125px;
+    width: 60%;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .perk-info h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+  }
 }
