@@ -26,31 +26,26 @@ p {
 
 .p1 {
   position: absolute;
-  width: 100%;
   left: 635px;
   top: 75px;
 }
 .p2 {
   position: absolute;
-  width: 100%;
   left: 482px;
   top: 222px;
 }
 .p3 {
   position: absolute;
-  width: 100%;
   left: 630px;
   top: 388px;
 }
 .p4 {
   position: absolute;
-  width: 100%;
   left: 795px;
   top: 222px;
 }
 .dice {
   position: absolute;
-  width: 100%;
   left: 732px;
   top: 324px;
 }
@@ -130,7 +125,8 @@ p {
 button {
   width: 10px;
 }
-@media screen and (max-width: 320px) {
+
+/* @media (max-width: 320px) {
   body {
     overflow: scroll;
   }
@@ -212,3 +208,52 @@ button {
     font-size: 16px;
   }
 }
+@media (max-width: 768px) {
+  .dice {
+    position: absolute;
+    width: 100%;
+    left: 360px;
+    top: 235px;
+    z-index: 2;
+  }
+  .dice-img {
+    width: 50px;
+  }
+  .p1 {
+    position: absolute;
+    left: 285px;
+    top: 25px;
+  }
+  .p1 img {
+    width: 75%;
+    height: 100%;
+  }
+  .p2 {
+    position: absolute;
+    left: 175px;
+    top: 165px;
+  }
+  .p2 img {
+    width: 75%;
+    height: 100%;
+  }
+  .p3 {
+    position: absolute;
+    left: 280px;
+    top: 285px;
+  }
+  .p3 img {
+    width: 75%;
+    height: 100%;
+  }
+  .p4 {
+    position: absolute;
+    left: 400px;
+    top: 170px;
+  }
+  .p4 img {
+    width: 75%;
+    height: 100%;
+  }
+} */
+/* Need to work on this more xqcL */

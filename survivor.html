@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Random Survivor Perks</title>
-</head>
-<body>
-	
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survivor Perk Randomizer</title>
+  </head>
+  <body>
+    <header>
+      <a href="home.html" class="home-btn"><i class="fas fa-home fa-3x"></i></a>
+    </header>
+    <div class="content">
+      <div class="perks">
+        <div class="p1" id="p1s"></div>
+        <div class="p2" id="p2s"></div>
+        <div class="p3" id="p3s"></div>
+        <div class="p4" id="p4s"></div>
+        <p class="self-destro" id="self-destro">
+          Click to randomize survivor perks!
+        </p>
+        <div class="dice" id="dice">
+          <img
+            src="miscimgs/IconHelp_iridescentShards.png"
+            alt=""
+            class="dice-img"
+          />
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="survivor.js"></script>
+  </body>
 </html>
