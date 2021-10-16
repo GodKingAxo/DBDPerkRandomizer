@@ -1,132 +1,4 @@
-body.home {
-  background-color: #484848;
-}
-body {
-  background: url("miscimgs/DBDLogo3.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: 100%;
-  overflow: hidden;
-}
-p {
-  color: #dd6868;
-}
-.mainimgs {
-  max-width: 100%;
-  width: 248px;
-  height: 248px;
-}
-
-.home-flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 750px;
-}
-
-.p1 {
-  position: absolute;
-  left: 635px;
-  top: 75px;
-}
-.p2 {
-  position: absolute;
-  left: 482px;
-  top: 222px;
-}
-.p3 {
-  position: absolute;
-  left: 630px;
-  top: 388px;
-}
-.p4 {
-  position: absolute;
-  left: 795px;
-  top: 222px;
-}
-.dice {
-  position: absolute;
-  left: 732px;
-  top: 324px;
-}
-.dice-img {
-  width: 65px;
-}
-.self-destro {
-  position: absolute;
-  left: 670px;
-  top: 265px;
-}
-.killers .home-killers-title {
-  visibility: hidden;
-  width: 100px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 10px;
-  position: absolute;
-  z-index: 1;
-}
-.killers:hover .home-killers-title {
-  visibility: visible;
-}
-.survivors .home-survivors-title {
-  visibility: hidden;
-  width: 100px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 10px;
-  position: absolute;
-  z-index: 1;
-}
-.survivors:hover .home-survivors-title {
-  visibility: visible;
-}
-/* Tooltip text */
-.perk-tip .perk-info {
-  visibility: hidden;
-  width: 400px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-}
-/* Left tooltip */
-.p2 .perk-info {
-  top: -5px;
-  right: 105%;
-}
-/* Right tooltip */
-.p1 .perk-info {
-  top: -35px;
-  left: 105%;
-}
-.p4 .perk-info {
-  top: -5px;
-  left: 105%;
-}
-.p3 .perk-info {
-  top: 90px;
-  left: 105%;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.perk-tip:hover .perk-info {
-  visibility: visible;
-}
-button {
-  width: 10px;
-}
-
-/* @media (max-width: 320px) {
+@media (min-width: 320px) {
   body {
     overflow: scroll;
   }
@@ -208,7 +80,8 @@ button {
     font-size: 16px;
   }
 }
-@media (max-width: 768px) {
+
+@media (min-width: 768px) {
   .dice {
     position: absolute;
     width: 100%;
@@ -255,5 +128,176 @@ button {
     width: 75%;
     height: 100%;
   }
-} */
-/* Need to work on this more xqcL */
+}
+
+body.home {
+  background-color: #484848;
+}
+body {
+  background: url("miscimgs/DBDLogo3.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+p {
+  color: #dd6868;
+}
+.mainimgs {
+  max-width: 100%;
+  width: 248px;
+  height: 248px;
+}
+
+.home-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 750px;
+}
+
+.killers .home-killers-title {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+}
+.killers:hover .home-killers-title {
+  visibility: visible;
+}
+.survivors .home-survivors-title {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+}
+.survivors:hover .home-survivors-title {
+  visibility: visible;
+}
+@media (min-width: 1280px) {
+  .p1 {
+    position: absolute;
+    left: 820px;
+    top: 50px;
+  }
+  .p1 img {
+    width: 100%;
+  }
+  .p2 {
+    position: absolute;
+    left: 670px;
+    top: 200px;
+  }
+  .p2 img {
+    width: 100%;
+  }
+  .p3 {
+    position: absolute;
+    left: 805px;
+    top: 365px;
+  }
+  .p3 img {
+    width: 100%;
+  }
+  .p4 {
+    position: absolute;
+    left: 950px;
+    top: 205px;
+  }
+  .p4 img {
+    width: 100%;
+  }
+  .dice {
+    position: absolute;
+    left: 905px;
+    top: 300px;
+  }
+  .dice-img {
+    width: 65px;
+  }
+  .self-destro {
+    position: absolute;
+    left: 875px;
+    top: 245px;
+  }
+  /* Tooltip text */
+  .perk-tip .perk-info {
+    visibility: hidden;
+    width: 400px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  /* Left tooltip */
+  .p2 .perk-info {
+    top: -5px;
+    right: 105%;
+  }
+  /* Right tooltip */
+  .p1 .perk-info {
+    top: -35px;
+    left: 105%;
+  }
+  .p4 .perk-info {
+    top: -5px;
+    left: 105%;
+  }
+  .p3 .perk-info {
+    top: 90px;
+    left: 105%;
+  }
+}
+/* Laptop sizing
+.p1 {
+  position: absolute;
+  left: 635px;
+  top: 75px;
+}
+.p2 {
+  position: absolute;
+  left: 482px;
+  top: 222px;
+}
+.p3 {
+  position: absolute;
+  left: 630px;
+  top: 388px;
+}
+.p4 {
+  position: absolute;
+  left: 795px;
+  top: 222px;
+}
+.dice {
+  position: absolute;
+  left: 732px;
+  top: 324px;
+}
+.dice-img {
+  width: 65px;
+}
+.self-destro {
+  position: absolute;
+  left: 670px;
+  top: 265px;
+}
+*/
+button {
+  width: 10px;
+}
